@@ -1,26 +1,31 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "my-emdash-site",
+	"name": "blog-nmatute",
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
+	"preview_urls": false,
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "my-emdash-site",
-            "database_id": "3c9e2d78e8fe4cc0b886ceb1c5ff6b69",
+			"database_name": "blog-nmatute",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
-			"bucket_name": "my-emdash-media",
+			"bucket_name": "blog-nmatute",
 		},
 	],
-	// Worker Loader for plugin sandboxing
 	"worker_loaders": [
 		{
 			"binding": "LOADER",
+		},
+	],
+	"kv_namespaces": [
+		{
+			"binding": "SESSION",
+			"id": "6d1f1a8968de43f8832a70a70eb973a2"
 		},
 	],
 }
