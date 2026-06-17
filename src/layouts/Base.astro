@@ -81,6 +81,9 @@ const isLoggedIn = !!Astro.locals.user;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{fullTitle}</title>
+		<!-- Preload critical fonts (matching web-nmatute) -->
+		<link rel="preload" href="/fonts/Archivo/Archivo-Regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="/fonts/Archivo/Archivo-Bold.woff" as="font" type="font/woff" crossorigin />
 		<EmDashHead page={pageCtx} />
 		<script is:inline>
 			// Apply theme immediately to prevent flash
@@ -555,14 +558,13 @@ const isLoggedIn = !!Astro.locals.user;
 				h4,
 				h5,
 				h6 {
-					font-family: var(--font-sans);
+					font-family: var(--font-display);
 					line-height: var(--leading-tight);
-					font-weight: 600;
+					font-weight: 800;
 					letter-spacing: var(--tracking-snug);
 				}
 
 				h1 {
-					font-weight: 700;
 					letter-spacing: var(--tracking-tight);
 				}
 

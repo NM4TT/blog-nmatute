@@ -4,42 +4,10 @@
   Standardized palette and typography matching nmatute.dev and web-nmatute.
 */
 
-/* Fonts declarations */
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Syne';
-  src: url('/fonts/Syne-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Syne';
-  src: url('/fonts/Syne-ExtraBold.woff2') format('woff2');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Office Code Pro';
-  src: url('/fonts/OfficeCodePro-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import "./fonts.css";
+
+
+
 
 
 /* --- Color Theme Customizations --- */
@@ -58,9 +26,9 @@
 	--color-on-accent: #ffffff;
 
 	/* --- Fonts --- */
-	--font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	--font-mono: "Office Code Pro", ui-monospace, SFMono-Regular, Menlo, monospace;
-	--font-display: "Syne", var(--font-sans);
+	--font-sans: "Archivo", ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--font-mono: "Archivo", ui-monospace, SFMono-Regular, Menlo, monospace;
+	--font-display: "Archivo", var(--font-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,14 +65,14 @@
 
 /* --- Font Customizations --- */
 body, html, input, button, select, textarea {
-  font-family: var(--font-sans) !important;
+  font-family: var(--font-sans);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display) !important;
-  font-weight: 800 !important;
+  font-family: var(--font-display);
+  font-weight: 800;
 }
 
 code, pre, .mono {
-  font-family: var(--font-mono) !important;
+  font-family: var(--font-mono);
 }
