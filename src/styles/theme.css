@@ -58,7 +58,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root:not(.light) {
 		/* --- Colors (Dark Mode) --- */
 		--color-bg: #080808;
 		--color-bg-subtle: #121212;
